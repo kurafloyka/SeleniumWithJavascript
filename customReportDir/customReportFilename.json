@@ -1,0 +1,180 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-01-16T13:59:54.044Z",
+    "end": "2022-01-16T14:00:18.401Z",
+    "duration": 24357,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "585cbb1c-924d-4d22-b0fd-3d8840dee5d2",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "33a8a131-6e22-4b8c-b53b-f5e6a590e11d",
+          "title": "First Test with Search the iphones on searchbox",
+          "fullFile": "/Users/farukakyol/Desktop/seleniumDemo/test/firstTest.js",
+          "file": "/test/firstTest.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"First Test with Search the iphones on searchbox\"",
+              "fullTitle": "First Test with Search the iphones on searchbox \"before each\" hook in \"First Test with Search the iphones on searchbox\"",
+              "timedOut": null,
+              "duration": 5,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": null,
+              "context": null,
+              "code": "//launch browser \n        driver = new Builder().forBrowser(\"firefox\").build();\n        //navigate to our applicaton\n        driver.get(\"https://www.hepsiburada.com\")",
+              "err": {},
+              "uuid": "843d8652-1cee-4baa-a847-504253ad9535",
+              "parentUUID": null,
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after each\" hook in \"First Test with Search the iphones on searchbox\"",
+              "fullTitle": "First Test with Search the iphones on searchbox \"after each\" hook in \"First Test with Search the iphones on searchbox\"",
+              "timedOut": null,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": null,
+              "context": null,
+              "code": "//close the browser\n        driver.quit();",
+              "err": {},
+              "uuid": "de2f5071-9814-4ed1-8b27-4ad0854f3b46",
+              "parentUUID": null,
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "successfully search iphone",
+              "fullTitle": "First Test with Search the iphones on searchbox successfully search iphone",
+              "timedOut": null,
+              "duration": 11155,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//search a keyword\n        await driver.findElement(By.xpath(\"//input[@class='desktopOldAutosuggestTheme-input']\")).sendKeys('iphone 11', Key.ENTER);\n        //await driver.findElement(By.xpath(\"//div[@class='iblpc']\")).click();\n        var searchTextElement = driver.wait(until.elementLocated(By.xpath('//*[@id=\"SearchResultSummary\"]')));\n        let searchText = await searchTextElement.getText().then(function (value) {\n            return value\n        });\n        //assert using node assertion\n        //assert.strictEqual(searchText, 'iphone 11 ile ilgili 10000+ ürün bulduk');\n        //assert using chai should\n        searchText.should.contains('iphone 11 ile ilgili 10000+ ürün bulduk');\n        console.log(searchText);",
+              "err": {},
+              "uuid": "07d51324-331f-4f9b-870e-65a1731dbf2d",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "07d51324-331f-4f9b-870e-65a1731dbf2d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11155,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        },
+        {
+          "uuid": "35499061-8c86-4cbe-b660-c687aa079e9e",
+          "title": "Second Test with Search the iphones on searchbox",
+          "fullFile": "/Users/farukakyol/Desktop/seleniumDemo/test/secondTest.js",
+          "file": "/test/secondTest.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "successfully search iphone",
+              "fullTitle": "Second Test with Search the iphones on searchbox successfully search iphone",
+              "timedOut": null,
+              "duration": 23696,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//launch browser \n        let driver = await new Builder().forBrowser(\"firefox\").build();\n        //navigate to our applicaton\n        await driver.get(\"https://www.hepsiburada.com\")\n        //search a keyword\n        await driver.findElement(By.xpath(\"//input[@class='desktopOldAutosuggestTheme-input']\")).sendKeys('iphone 11', Key.ENTER);\n        //await driver.findElement(By.xpath(\"//div[@class='iblpc']\")).click();\n        var searchTextElement = driver.wait(until.elementLocated(By.xpath('//*[@id=\"SearchResultSummary\"]')));\n        let searchText = await searchTextElement.getText().then(function (value) {\n            return value\n        });\n        //assert using node assertion\n        //assert.strictEqual(searchText, 'iphone 11 ile ilgili 10000+ ürün bulduk');\n        //assert using chai should\n        searchText.should.contains('iphone 11 ile ilgili 10000+ ürün bulduk');\n        console.log(searchText);\n        //close the browser\n        await driver.quit();",
+              "err": {},
+              "uuid": "c5d901ad-f6ea-4a1c-8cc9-6d6358b07ccc",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c5d901ad-f6ea-4a1c-8cc9-6d6358b07ccc"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 23696,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 0
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "9.1.4"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "customReportFilename",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "customReportDir",
+        "reportFilename": "customReportFilename"
+      },
+      "version": "6.0.1"
+    }
+  }
+}
